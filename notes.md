@@ -32,3 +32,21 @@ git config --global core.editor "/Applications/Visual\ Studio\ Code.app/Contents
 ```
 git config --list
 ```
+**初始化仓库**
+###### 在现有目录初始化仓库
+```
+git init
+```
+###### 如果目录非空,可暂存需要追踪的文件并提交
+```
+git add notes.md
+git commit -m "准备开始学习Git命令前,对Git环境进行部分设置;"
+```
+###### 克隆现有的仓库 `GitLearn`, 并在当前目录创建同名仓库 `GitLearn`
+```
+git clone https://github.com/cheeroncode/GitLearn.git
+```
+###### 克隆现有的仓库 `GitLearn`, 并在当前目录创建新仓库名 `Learn`
+```
+git clone https://github.com/cheeroncode/GitLearn.git Learn
+```
