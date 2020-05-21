@@ -50,3 +50,13 @@ git clone https://github.com/cheeroncode/GitLearn.git
 ```
 git clone https://github.com/cheeroncode/GitLearn.git Learn
 ```
+**检查当前文件状态**
+###### 详细显示文件状态
+```
+git status
+```
+###### 紧凑显示文件状态
+###### `??` 未跟踪, `A` 新添到暂存区, `M` 被修改,左暂存,右未暂存,可同时出现
+```
+git status -s
+```
