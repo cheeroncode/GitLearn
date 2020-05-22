@@ -114,3 +114,7 @@ git rm -f try_rm2.txt
 ```
 git rm --cached try_rm3.txt
 ```
+**移动文件**
+```
+git mv try_rm2.txt try.txt
+```
