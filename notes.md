@@ -118,3 +118,56 @@ git rm --cached try_rm3.txt
 ```
 git mv try_rm2.txt try.txt
 ```
+**查看提交历史**
+```
+git log && echo "查看提交历史,详细模式"
+git l && echo "查看提交历史,紧凑模式"
+git l -2 && echo "查看提交历史,紧凑模式,最近2次提交"
+git l -2 -p echo "查看提交历史,紧凑模式,最近2次提交和提交差异"
+git l --stat && echo "查看提交历史的简略统计信息"
+git l --graph --oneline && echo "查看提交历史和分支,合并历史"
+git l --since=1.days && echo "--after 查看 1天前 至 今 的所有提交"
+git l --until=1.days && echo "--before 查看 开始 至 1天前 的所有提交"
+git l -S "hello" && echo "查看添加或删除过 hello 字符串的所有提交"
+git l --pretty=format:"%h - %an, %ar : %s" && "查看提交历史,自定格式"
+```
+> log --pretty=format:"..." 格式
+```
+%H 提交对象（commit）的完整哈希字串
+%h 提交对象的简短哈希字串
+%T 树对象（tree）的完整哈希字串
+%t 树对象的简短哈希字串
+%P 父对象（parent）的完整哈希字串
+%p 父对象的简短哈希字串
+%an 作者（author）的名字
+%ae 作者的电子邮件地址
+%ad 作者修订日期（可以用 --date= 选项定制格式）
+%ar 作者修订日期，按多久以前的方式显示
+%cn 提交者（committer）的名字
+%ce 提交者的电子邮件地址
+%cd 提交日期
+%cr 提交日期，按多久以前的方式显示
+%s 提交说明
+```
+> log 常用参数
+```
+-p 按补丁格式显示每个更新之间的差异。
+--stat 显示每次更新的文件修改统计信息。
+--shortstat 只显示 --stat 中最后的行数修改添加移除统计。
+--name-only 仅在提交信息后显示已修改的文件清单。
+--name-status 显示新增、修改、删除的文件清单。
+--abbrev-commit 仅显示 SHA-1 的前几个字符，而非所有的 40 个字符。
+--relative-date 使用较短的相对时间显示（比如，“2 weeks ago”）。
+--graph 显示 ASCII 图形表示的分支合并历史。
+--pretty 使用其他格式显示历史提交信息。可用 oneline，short，full，fuller 和 format（后跟指定格式）。
+```
+> log 限制参数
+```
+-(n) 仅显示最近的 n 条提交
+--since, --after 仅显示指定时间之后的提交。
+--until, --before 仅显示指定时间之前的提交。
+--author 仅显示指定作者相关的提交。
+--committer 仅显示指定提交者相关的提交。
+--grep 仅显示含指定关键字的提交
+-S 仅显示添加或移除了某个关键字的提交
+```
