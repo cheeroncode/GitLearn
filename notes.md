@@ -95,3 +95,22 @@ git diff
 git diff --cached
 git diff --staged
 ```
+**删除已跟踪文件**
+> 添加临时文件
+```
+touch try_rm1.txt
+touch try_rm2.txt
+touch try_rm2.txt
+```
+> 直接删除工作区和暂存区的 try_rm1.txt
+```
+git rm try_rm1.txt
+```
+> 如果已修改过 try_rm2.txt, 需要加 -f 参数强制删除
+```
+git rm -f try_rm2.txt
+```
+> 只删除暂存区,但保留工作区, 使用 --cached 参数
+```
+git rm --cached try_rm3.txt
+```
