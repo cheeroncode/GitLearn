@@ -50,6 +50,29 @@ git clone https://github.com/cheeroncode/GitLearn.git
 ```
 git clone https://github.com/cheeroncode/GitLearn.git Learn
 ```
+**暂存文件**
+###### 添加文件到暂存区
+```
+git add notes.md && echo "添加 notes.md 文件到暂存区"
+```
+###### 取消暂存的文件
+```
+git reset HEAD notes.md && echo "取消暂存的 notes.md 文件"
+```
+**提交文件**
+###### 正常提交
+```
+git commit -m "提交说明"
+```
+###### 提交时遗漏了文件或需要修改提交说明
+```
+git add xxx.txt && echo "添加忘了添加的文件 xxx.txt"
+git commit --amend -m "新的提交说明"
+```
+**取消对文件的修改**
+```
+git checkout -- xxx.txt && echo "从仓库复制文件覆盖工作区的文件"
+```
 **检查当前文件状态**
 ###### 详细显示文件状态
 ```
