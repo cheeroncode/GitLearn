@@ -86,31 +86,31 @@ doc/*.txt
 doc/**/*.txt
 ```
 **比较文件差异**
-> 比较工作区与暂存区文件的修改差异
+###### 比较工作区与暂存区文件的修改差异
 ```
 git diff
 ```
-> 比较暂存区与最后提交时文件的修改差异
+###### 比较暂存区与最后提交时文件的修改差异
 ```
 git diff --cached
 git diff --staged
 ```
 **删除已跟踪文件**
-> 添加临时文件
+###### 添加临时文件
 ```
 touch try_rm1.txt
 touch try_rm2.txt
 touch try_rm2.txt
 ```
-> 直接删除工作区和暂存区的 try_rm1.txt
+###### 直接删除工作区和暂存区的 try_rm1.txt
 ```
 git rm try_rm1.txt
 ```
-> 如果已修改过 try_rm2.txt, 需要加 -f 参数强制删除
+###### 如果已修改过 try_rm2.txt, 需要加 -f 参数强制删除
 ```
 git rm -f try_rm2.txt
 ```
-> 只删除暂存区,但保留工作区, 使用 --cached 参数
+###### 只删除暂存区,但保留工作区, 使用 --cached 参数
 ```
 git rm --cached try_rm3.txt
 ```
@@ -131,7 +131,7 @@ git l --until=1.days && echo "--before 查看 开始 至 1天前 的所有提交
 git l -S "hello" && echo "查看添加或删除过 hello 字符串的所有提交"
 git l --pretty=format:"%h - %an, %ar : %s" && "查看提交历史,自定格式"
 ```
-> log --pretty=format:"..." 格式
+###### log --pretty=format:"..." 格式
 ```
 %H 提交对象（commit）的完整哈希字串
 %h 提交对象的简短哈希字串
@@ -149,7 +149,7 @@ git l --pretty=format:"%h - %an, %ar : %s" && "查看提交历史,自定格式"
 %cr 提交日期，按多久以前的方式显示
 %s 提交说明
 ```
-> log 常用参数
+###### log 常用参数
 ```
 -p 按补丁格式显示每个更新之间的差异。
 --stat 显示每次更新的文件修改统计信息。
@@ -161,7 +161,7 @@ git l --pretty=format:"%h - %an, %ar : %s" && "查看提交历史,自定格式"
 --graph 显示 ASCII 图形表示的分支合并历史。
 --pretty 使用其他格式显示历史提交信息。可用 oneline，short，full，fuller 和 format（后跟指定格式）。
 ```
-> log 限制参数
+###### log 限制参数
 ```
 -(n) 仅显示最近的 n 条提交
 --since, --after 仅显示指定时间之后的提交。
