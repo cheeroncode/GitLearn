@@ -232,3 +232,49 @@ git pull server_dev
 ```
 git push server_dev master
 ```
+
+## 标签命令
+**查看标签**
+###### 列出已有标签 
+```
+git tag
+```
+###### 按模式列出标签
+```
+git tag -l 'v1.8.5*'
+```
+**创建标签**
+###### 附注标签 推荐日常使用这个
+```
+git tag -a v_learn_remote_cmd -m "学习完远程仓库命令"
+echo "显示附注标签 v_learn_remote_cmd 的信息" && git show v_learn_remote_cmd
+```
+###### 轻量标签
+```
+git tag v_light_tag
+echo "显示轻量标签 v_light_tag 的信息" && git show v_light_tag
+```
+**查看标签**
+```
+git show tag_name
+```
+**删除标签**
+```
+git tag -d tag_name
+```
+**补打标签**
+###### 补打标签,在创建标签命令末尾补上指定提交的hash字符串
+```
+git tag -a v_later_tag 4454b43 -m "对历史提交创建标签"
+```
+**推送标签**
+###### 推送标签到远程库,默认 git push 时标签不会推送上传
+```
+echo "推送单个标签" && git push origin v0.1.1
+echo "推送所有未推送的标签" && git push origin --tags
+```
+**补打标签**
+###### 签出标签,不会像分支一样来回移动,在新标签分支上工作提交需要注意,还需要总结??
+```
+git checkout -b newtag_name v0.1.1
+```
