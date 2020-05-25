@@ -32,6 +32,12 @@ git config --global core.editor "/Applications/Visual\ Studio\ Code.app/Contents
 ```
 git config --list
 ```
+###### 配置 Git 别名命令
+```
+echo "查看配置" && git config -l --global
+echo "配置 git last 查看最近两次提交" && git config --global alias.last 'log -2 HEAD'
+echo "删除配置" && git config --global --unset alias.last
+```
 **初始化仓库**
 ###### 在现有目录初始化仓库
 ```
