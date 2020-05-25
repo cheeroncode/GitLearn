@@ -196,7 +196,39 @@ git l --pretty=format:"%h - %an, %ar : %s" && "查看提交历史,自定格式"
 ```
 ## 远程仓库的使用
 **查看已经配置的远程仓库服务器**
+###### 简要查看远程仓库的信息 git remote
 ```
 git remote && echo "列出远程仓库服务器的简写名称"
 git remote -v && echo "列出名称与对应的URL链接"
+```
+###### 详细查看远程仓库的信息 git remote show [remote-name]**
+```
+git remote show origin
+```
+**添加远程仓库**
+###### 添加引用名为 server_dev 的远程库
+```
+git remote add server_dev https://github.com/cheeroncode/GitLearn
+```
+**修改远程仓库的引用名**
+###### 重命名远程库 server_dev 的引用名
+```
+git remote rename server_dev server_new_name
+```
+**删除远程仓库的引用名**
+```
+git remote rm server_dev
+```
+**从远程仓库抓取数据**
+```
+git fetch server_dev
+```
+**从远程仓库抓取数据并合并到当前分支**
+```
+git pull server_dev
+```
+**推送到远程仓库**
+###### 推送本地 master 分支到远程 server_dev
+```
+git push server_dev master
 ```
