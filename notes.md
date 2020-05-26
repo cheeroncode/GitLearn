@@ -127,6 +127,9 @@ git diff --staged
 **想切换分支,但不想提交修改,使用 git stash 保存工作区**
 ```
 git stash
+echo "恢复保存的工作区" && git stash apply stash@{2}
+echo "删除保存的工作" && git stash drop stash@{1}
+echo "移除所有未追踪的文件和空目录" && git clean -f -d
 ```
 **删除已跟踪文件**
 ###### 添加临时文件
