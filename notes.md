@@ -299,4 +299,7 @@ echo "切换分支" && git checkout ver0.1.0
 echo "第一次尝试在分支里新建文件" >> ver0_1_0.md
 echo "暂存新文件" && git add ver0_1_0.md
 echo "提交新文件" && git c -m  "在分支 ver0.1.0 提交文件"
+echo "切换到master" && git checkout master
+git merge ver0.1.0 -m "合并分支 ver0.1.0 到 master"
+echo "删除分支 ver0.1.0" && git branch -d ver0.1.0
 ```
