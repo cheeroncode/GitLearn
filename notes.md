@@ -291,3 +291,12 @@ echo "推送所有未推送的标签" && git push origin --tags
 ```
 git checkout -b newtag_name v0.1.1
 ```
+## Git 分支命令
+```
+echo "创建分支" && git branch ver0.1.0
+echo "查看分支" && git log --oneline --decorate
+echo "切换分支" && git checkout ver0.1.0
+echo "第一次尝试在分支里新建文件" >> ver0_1_0.md
+echo "暂存新文件" && git add ver0_1_0.md
+echo "提交新文件" && git c -m  "在分支 ver0.1.0 提交文件"
+```
