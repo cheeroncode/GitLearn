@@ -293,8 +293,11 @@ git checkout -b newtag_name v0.1.1
 ```
 ## Git 分支命令
 ```
+echo "查看分支" && git branch
+echo "查看分支及最后一次提交" && git branch -v
+echo "查看分支合并 --merged 或未合并 --no-merged" && git branch --merged
 echo "创建分支" && git branch ver0.1.0
-echo "查看分支" && git log --oneline --decorate
+echo "查看分支历史提交" && git log --oneline --decorate
 echo "切换分支" && git checkout ver0.1.0
 echo "第一次尝试在分支里新建文件" >> ver0_1_0.md
 echo "暂存新文件" && git add ver0_1_0.md
@@ -302,4 +305,5 @@ echo "提交新文件" && git c -m  "在分支 ver0.1.0 提交文件"
 echo "切换到master" && git checkout master
 git merge ver0.1.0 -m "合并分支 ver0.1.0 到 master"
 echo "删除分支 ver0.1.0" && git branch -d ver0.1.0
+echo "强制删除丢掉分支" && git branch -D ver0.1.0
 ```
