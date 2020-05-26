@@ -124,6 +124,10 @@ git diff
 git diff --cached
 git diff --staged
 ```
+**想切换分支,但不想提交修改,使用 git stash 保存工作区**
+```
+git stash
+```
 **删除已跟踪文件**
 ###### 添加临时文件
 ```
